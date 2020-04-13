@@ -1,0 +1,21 @@
+.dialog{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-evenly;
+}
+
+.dialog a{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+}
+.dialog a.active{
+    color: gold;
+}
+.dialog img{
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
+}

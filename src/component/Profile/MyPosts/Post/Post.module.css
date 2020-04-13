@@ -1,0 +1,19 @@
+.item img{
+    width: 80px;
+    border-radius: 50%;
+}
+
+.item{
+    height: 120px;
+    color: #FFC157;
+    padding: 10px;
+    margin-top: 10px;
+    background: #5796ff;
+}
+.item span{
+    margin-left: 10px;
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-size: 22px;
+}
+

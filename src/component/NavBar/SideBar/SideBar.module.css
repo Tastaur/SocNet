@@ -1,0 +1,16 @@
+.barItem{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.bar {
+    color: orange;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 40px;
+    text-decoration: none;
+    text-shadow: 2px 0px 17px rgba(206,89,55,0.92);
+    margin-top: 50px;
+}

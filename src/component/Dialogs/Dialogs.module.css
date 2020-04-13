@@ -1,0 +1,41 @@
+.dialogs{
+    display: grid;
+    grid-template-areas: "d m";
+    grid-template-columns: 3fr 9fr;
+    max-width: 1100px;
+}
+.dialogsItem{
+    grid-area: d;
+    padding: 10px;
+    min-width: 200px;
+}
+.friendsTalk{
+    color:green;
+}
+.myMessage{
+    color:black;
+}
+.button{
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background: initial;
+    color: white;
+    border: 3px solid white;
+    border-radius: 20px;
+    margin: 10px auto;
+    box-shadow: 0px 10px 13px -7px #000000, -4px 5px 25px -3px rgba(0,0,0,0.23);
+    outline: none;
+}
+
+.change{
+    display: flex;
+    flex-direction: column;
+}
+.area{
+    height: 100px;
+    resize: none;
+}
+.button:active{
+    background: #5794d1;
+}

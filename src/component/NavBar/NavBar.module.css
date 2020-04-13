@@ -1,0 +1,19 @@
+.nav{
+    grid-area: n;
+    text-align: center;
+    background: linear-gradient(to bottom, #2740FF 0%, #2CABFF 70%, #FFFFFF 100%);
+    box-shadow:1px 0px 30px 0px rgba(50, 50, 50, 0.75);
+    min-height: 600px;
+}
+.item a{
+    color: orange;
+    font-family: Ubuntu ;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 60px;
+    text-decoration: none;
+    text-shadow: 2px 0px 17px rgba(206,89,55,0.92);
+}
+.item a.active{
+    color: gold;
+}

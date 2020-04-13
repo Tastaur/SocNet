@@ -1,0 +1,10 @@
+.item img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.item p{
+    font-size: 16px;
+    line-height: 0;
+    margin: 0;
+}
