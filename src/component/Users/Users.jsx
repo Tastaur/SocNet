@@ -10,7 +10,7 @@ let Users = (props) => {
     photoUrl: 'https://ae01.alicdn.com/kf/HTB1UBilQFXXXXa6XFXXq6xXFXXXy.jpg',
     followed: true,
     fullName: 'Mark',
-    status: 'i\'m learning React with IT-Kamasutra',
+    status: 'i\'m learning React',
     location: {country: 'Russia', city: 'Togliatti'},
   },
     {
