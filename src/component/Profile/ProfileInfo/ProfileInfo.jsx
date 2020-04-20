@@ -8,6 +8,7 @@ import instagramIcon from '../../../assets/images/instagram.svg'
 import vkIcon from '../../../assets/images/vk.svg'
 import twitterIcon from '../../../assets/images/twitter.svg'
 import githubIcon from '../../../assets/images/github.svg'
+import defaultAvatar from '../../../assets/images/thor.png'
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -16,7 +17,7 @@ const ProfileInfo = (props) => {
 
   return <div className={classes.profileInfo}>
     <div>
-      <div><img className={classes.avatar} src={props.profile.photos.large}/></div>
+      {props.profile.photos.large !=null || props.profile.photos.large!= undefined ? <div><img className={classes.avatar} src={props.profile.photos.large}/></div> : <div><img className={classes.avatar} src={defaultAvatar}/></div>}
       <div>
         <div className={classes.descriptionBlock}> {props.profile.aboutMe}</div>
         {props.profile.lookingForAJob ?

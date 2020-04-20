@@ -6,7 +6,11 @@
 .descriptionBlock {
     margin: 10px 0;
 }
+.avatar{
+    width: 350px;
+    height: 350px;
 
+}
 .contactImg {
     width: 30px;
     height: 30px;
