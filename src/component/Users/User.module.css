@@ -2,3 +2,14 @@
     width: 100px;
     height: 100px;
 }
+.selectedPage{
+    font-weight: bolder;
+}
+span{
+    cursor: pointer;
+}
+.pageContainer{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: cursive;
+}
