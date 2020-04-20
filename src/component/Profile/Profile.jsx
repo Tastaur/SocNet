@@ -7,7 +7,7 @@ const Profile = (props) => {
   return <div className={classes.profile}>
     <img className={classes.mainImage}
          src="https://trofotodesign.ru/images/trofotocontent/orca/TROFOTO_4831_07072012.jpg"/>
-    <ProfileInfo/>
+    <ProfileInfo profile={props.profile}/>
     <MyPostsContainer  />
   </div>
 }

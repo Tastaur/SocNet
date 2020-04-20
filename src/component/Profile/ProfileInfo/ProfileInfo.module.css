@@ -1,11 +1,36 @@
-.avatar{
-    height: 100px;
-    width: 100px;
+.jobPic {
+    width: 40px;
+    height: 40px;
 }
-.descriptionBlock{
 
+.descriptionBlock {
+    margin: 10px 0;
 }
-.profileInfo{
+
+.contactImg {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.profileInfo {
     padding: 10px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    display: flex;
 
 }
+.contactItem{
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.jobStatus {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.contactContainer{
+    margin: 0 30px;
+}
+
