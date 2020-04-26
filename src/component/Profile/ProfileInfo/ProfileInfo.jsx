@@ -32,26 +32,26 @@ const ProfileInfo = (props) => {
     </div>
     <div className={classes.contactContainer}>
 
-      {props.profile.contacts.facebook != null || props.profile.contacts.facebook !== undefined ?
+      {props.profile.contacts.facebook != null || props.profile.contacts.facebook != undefined ?
           <div className={classes.contactItem}><img src={facebookIcon} className={classes.contactImg}/>
             <span>{props.profile.contacts.facebook}</span>
           </div> : null}
 
-      {props.profile.contacts.instagram != null || props.profile.contacts.instagram !== undefined ?
+      {props.profile.contacts.instagram != null || props.profile.contacts.instagram != undefined ?
           <div className={classes.contactItem}><img src={instagramIcon} className={classes.contactImg}/>
             <span>{props.profile.contacts.instagram}</span>
           </div> : null}
 
-      {props.profile.contacts.vk != null || props.profile.contacts.vk !== undefined ?
+      {props.profile.contacts.vk != null || props.profile.contacts.vk != undefined ?
           <div className={classes.contactItem}><img src={vkIcon} className={classes.contactImg}/>
             <span>{props.profile.contacts.vk}</span></div> : null}
 
-      {props.profile.contacts.twitter != null || props.profile.contacts.twitter !== undefined ?
+      {props.profile.contacts.twitter != null || props.profile.contacts.twitter != undefined ?
           <div className={classes.contactItem}><img src={twitterIcon} className={classes.contactImg}/>
             <span>{props.profile.contacts.twitter}</span>
           </div> : null}
 
-      {props.profile.contacts.github != null || props.profile.contacts.github !== undefined ?
+      {props.profile.contacts.github != null || props.profile.contacts.github != undefined ?
           <div className={classes.contactItem}><img src={githubIcon} className={classes.contactImg}/>
             <span>{props.profile.contacts.github}</span></div> : null}
 

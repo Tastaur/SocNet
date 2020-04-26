@@ -1,9 +1,33 @@
 .header{
     grid-area: h;
    background: linear-gradient(45deg, #2740FF 0%, #2CABFF 50%, #FFFFFF 100%);;
-
+    display: flex;
 }
 .header img{
     width: 190px;
     height: 100px;
+}
+.loginBlock{
+    margin: auto;
+}
+.loginBlock a{
+    color: orange;
+    font-family: Ubuntu ;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 60px;
+    text-decoration: none;
+    text-shadow: 2px 0px 17px rgba(206,89,55,0.92);
+}
+.loginBlock a.active{
+    color: gold;
+}
+.loginBlock {
+    color: gold;
+    font-family: Ubuntu ;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 60px;
+    text-decoration: none;
+    text-shadow: 2px 0px 17px rgba(206,89,55,0.92);
 }

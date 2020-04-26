@@ -6,7 +6,6 @@
     grid-template-rows: 100px 1fr;
     grid-template-columns: 190px 10fr;
 }
-
 .appWrapperContent {
     grid-area: c;
     background: linear-gradient(to bottom, #c0e7ff 0%, #89AAFF 60%, rgba(28, 110, 164, 0.57) 90%);
