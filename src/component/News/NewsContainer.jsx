@@ -1,7 +1,7 @@
 import React from 'react'
 import News from './News'
 import {connect} from 'react-redux'
-
+import {compose} from 'redux'
 
 
 let mapStateToProps = (state) => {
@@ -10,13 +10,8 @@ let mapStateToProps = (state) => {
   }
 }
 let mapDispatchToProps = (dispatch) => {
-  return {
-
-  }
+  return {}
 }
 
 
-
-const NewsContainer = connect(mapStateToProps, mapDispatchToProps)(News)
-
-export default NewsContainer
+export default compose(connect(mapStateToProps, mapDispatchToProps))(News)

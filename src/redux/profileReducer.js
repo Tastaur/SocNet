@@ -3,6 +3,7 @@ import {profileAPI} from '../API/api'
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 const SET_USER_PROFILE = 'SET_USER_PROFILE'
+const SET_STATUS = 'SET_STATUS'
 
 let initialState = {
   posts: [
@@ -10,7 +11,8 @@ let initialState = {
     {id: 2, message: 'I do that page for training my skiil on JS and React', likeCount: 10},
   ],
   newPostText: '',
-  profile:null,
+  profile: null,
+  status: '',
 }
 
 
@@ -20,7 +22,7 @@ const profileReducer = (state = initialState, action) => {
       let text = state.newPostText
       return {
         ...state,
-        posts: [...state.posts, {id: 6, likeCount: Math.random().toFixed(1)*10, message: text}],
+        posts: [...state.posts, {id: 6, likeCount: Math.random().toFixed(1) * 10, message: text}],
         newPostText: '',
       }
     }
@@ -36,6 +38,12 @@ const profileReducer = (state = initialState, action) => {
         profile: action.profile,
       }
     }
+    case SET_STATUS: {
+      return {
+        ...state,
+        status: action.status,
+      }
+    }
     default:
       return state
   }
@@ -43,11 +51,27 @@ const profileReducer = (state = initialState, action) => {
 export const addPost = () => ({type: ADD_POST})
 export const updateNewPostText = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
+export const setStatus = (status) => ({type: SET_STATUS, status})
 
 export const getUserProfile = (userId) => (dispatch) =>
-  profileAPI.setUser(userId)
+    profileAPI.setUser(userId)
+        .then(data => {
+          dispatch(setUserProfile(data))
+        })
+
+export const getUserStatus = (userId) => (dispatch) => {
+  profileAPI.getStatus(userId)
       .then(data => {
-        dispatch(setUserProfile(data))
-})
+        dispatch(setStatus(data))
+      })
+}
+export const updateStatus = (status) => (dispatch) => {
+  profileAPI.updateStatus(status)
+      .then(response => {
+        if (response.data.resultCode === 0) {
+          dispatch(setStatus(status))
+        }
+      })
+}
 
 export default profileReducer

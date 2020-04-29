@@ -1,6 +1,7 @@
 import React from 'react'
 import Music from './Music'
 import {connect} from 'react-redux'
+import {compose} from 'redux'
 
 let mapStateToProps = (state) => {
   return {
@@ -13,10 +14,7 @@ let mapDispatchToProps = (dispatch) => {
   }
 }
 
-const  MusicContainer = connect(mapStateToProps, mapDispatchToProps)(Music)
-export default MusicContainer
+export default compose(connect(mapStateToProps, mapDispatchToProps))(Music)
 
 
-// let profileMusic = props.music
-//         .map(music => <MusicItem artist={music.artist} song={music.song}/>)
-{/*{profileMusic}*/}
+

@@ -9,6 +9,7 @@ import vkIcon from '../../../assets/images/vk.svg'
 import twitterIcon from '../../../assets/images/twitter.svg'
 import githubIcon from '../../../assets/images/github.svg'
 import defaultAvatar from '../../../assets/images/thor.png'
+import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -28,6 +29,7 @@ const ProfileInfo = (props) => {
             : <div className={classes.jobStatus}>Don't need a job <img src={notNeed} className={classes.jobPic}/></div>
         }
         <div className={classes.jobStatus}>{props.profile.lookingForAJobDescription}</div>
+        <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
       </div>
     </div>
     <div className={classes.contactContainer}>
