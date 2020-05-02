@@ -10,7 +10,7 @@ const MyPosts = (props) => {
 
   let addPost = (value) => {
     props.addPost(value.newPostText)
-    value.newPostText = ''
+
   }
 
   return <div className={classes.postsBlock}>
