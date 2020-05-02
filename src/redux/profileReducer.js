@@ -10,7 +10,6 @@ let initialState = {
     {id: 1, message: 'Hello, this my first post', likeCount: 5},
     {id: 2, message: 'I do that page for training my skiil on JS and React', likeCount: 10},
   ],
-  newPostText: '',
   profile: null,
   status: '',
 }
@@ -19,17 +18,10 @@ let initialState = {
 const profileReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_POST: {
-      let text = state.newPostText
+      let text = action.newPostBody
       return {
         ...state,
-        posts: [...state.posts, {id: 6, likeCount: Math.random().toFixed(1) * 10, message: text}],
-        newPostText: '',
-      }
-    }
-    case UPDATE_NEW_POST_TEXT: {
-      return {
-        ...state,
-        newPostText: action.newText,
+        posts: [{id: 6, likeCount: Math.random().toFixed(1) * 10, message: text}, ...state.posts],
       }
     }
     case SET_USER_PROFILE: {
@@ -48,8 +40,7 @@ const profileReducer = (state = initialState, action) => {
       return state
   }
 }
-export const addPost = () => ({type: ADD_POST})
-export const updateNewPostText = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+export const addPost = (newPostBody) => ({type: ADD_POST, newPostBody})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
 

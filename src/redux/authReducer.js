@@ -2,6 +2,7 @@ import {authApi} from '../API/api'
 
 const SET_USER_DATA = 'SET_USER_DATA'
 
+
 let initialState = {
   userId: null,
   login: null,
@@ -29,6 +30,15 @@ export const getAuthUserData = () => (dispatch) => {
         if (data.resultCode === 0) {
           let {id, email, login} = data.data
           dispatch(setAuthUserData(id, email, login))
+        }
+      })
+}
+export const loginUserData = (email,password,rememberMe) =>(dispatch) =>{
+  authApi.login(email,password,rememberMe)
+      .then(response =>{
+        if(response.data.resultCode ===0){
+          let id = response.data.userId
+          dispatch(setAuthUserData(id))
         }
       })
 }

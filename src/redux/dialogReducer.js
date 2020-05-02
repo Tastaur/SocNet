@@ -1,5 +1,4 @@
 const ADD_NEW_MESSAGE = 'ADD-NEW-MESSAGE'
-const UPDATE_NEW_MESSAGE = 'UPDATE-NEW-MESSAGE'
 
 let initialState = {
   messagesData: [
@@ -24,30 +23,23 @@ let initialState = {
       src: 'https://cdn4.iconfinder.com/data/icons/famous-characters-add-on-vol-1-flat/48/Famous_Character_-_Add_On_1-16-512.png',
     },
   ],
-  newMessage: '',
 }
 
 const dialogsReducer = (state = initialState, action) => {
 
   switch (action.type) {
     case ADD_NEW_MESSAGE:
-      let body = state.newMessage
+      let body =action.newMessageBody
       return {
         ...state,
-        newMessage: '',
+        newMessageBody: '',
         messagesData: [...state.messagesData, {id: 4, myMessage: false, message: body}],
-      }
-    case UPDATE_NEW_MESSAGE:
-      return {
-        ...state,
-        newMessage: action.body,
       }
     default:
       return state
   }
 }
 
-export const sendNewMessage = () => ({type: ADD_NEW_MESSAGE})
-export const updateNewMessageBody = (body) => ({type: UPDATE_NEW_MESSAGE,  body})
+export const sendNewMessage = (newMessageBody) => ({type: ADD_NEW_MESSAGE,newMessageBody})
 
 export default dialogsReducer
