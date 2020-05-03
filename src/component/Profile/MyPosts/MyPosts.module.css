@@ -5,3 +5,22 @@
 .bostsBlock{
     padding: 10px;
 }
+.form{
+    width: 1000px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    background: initial;
+    color: white;
+    border: 3px solid white;
+    border-radius: 20px;
+    margin: 10px auto;
+    box-shadow: 0px 10px 13px -7px #000000, -4px 5px 25px -3px rgba(0,0,0,0.23);
+    outline: none;
+
+}

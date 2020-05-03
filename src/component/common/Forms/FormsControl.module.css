@@ -1,0 +1,13 @@
+.error textarea {
+    border: 3px solid red;
+}
+.error span{
+    color: red;
+
+}
+.formControl textarea{
+        width: 800px;
+        height: 100px;
+        resize: none;
+        font-family: cursive;
+}
