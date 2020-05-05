@@ -5,9 +5,7 @@
 .selectedPage{
     font-weight: bolder;
 }
-span{
-    cursor: pointer;
-}
+
 .pageContainer{
     display: flex;
     justify-content: space-evenly;
