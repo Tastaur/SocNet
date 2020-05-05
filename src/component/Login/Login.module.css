@@ -1,0 +1,9 @@
+.formSumError{
+    padding: 5px;
+    font-family: Arial;
+    color: red;
+    width: 150px;
+    font-size: 12px;
+    height: 20px;
+    align-items: center;
+}

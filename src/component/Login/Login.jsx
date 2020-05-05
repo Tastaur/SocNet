@@ -1,11 +1,11 @@
 import React from 'react'
-import {Field, reduxForm,reset} from 'redux-form'
+import {Field, reduxForm} from 'redux-form'
 import {connect} from 'react-redux'
 import {login} from '../../redux/authReducer'
 import {email, maxLengthCreator, minLengthCreator, required} from '../../utils/validators/validator'
 import {Input} from '../common/Forms/FormsControl'
 import {Redirect} from 'react-router-dom'
-import Preloader from '../common/preloader/Preloader'
+import classes from './Login.module.css'
 
 
 const maxLength20 = maxLengthCreator(20)
@@ -23,7 +23,10 @@ const LoginForm = (props) => {
                     name={'password'}
                     placeholder={`password`}
         /></div>
-        <div><Field component={Input} name={'rememberMe'} type={'checkbox'}/> remember me</div>
+        <div><Field component={Input} name={'rememberMe'} type={'checkbox'}/> Remember me</div>
+        {props.error && <div className={classes.formSumError}>
+          {props.error}
+        </div>}
         <div>
           <button>Login</button>
         </div>
@@ -36,16 +39,14 @@ const LoginReduxForm = reduxForm({
 
 
 const Login = (props) => {
-  const onSubmit = (formData,dispatch) => {
+  const onSubmit = (formData) => {
     props.login(formData.email, formData.password, formData.rememberMe);
-    dispatch(reset('login'))
   }
   if (props.isAuth){
     return <Redirect to={'/profile'}/>
   }
   return <div>
-    {props.isAuth ? <Preloader/> : null}
-    <h1>Wellcome!</h1>
+    <h1>Wellcome to social network</h1>
     <LoginReduxForm onSubmit={onSubmit}/>
   </div>
 }

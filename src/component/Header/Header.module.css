@@ -2,13 +2,11 @@
     grid-area: h;
    background: linear-gradient(45deg, #2740FF 0%, #2CABFF 50%, #FFFFFF 100%);;
     display: flex;
+    position: relative;
 }
 .header img{
     width: 190px;
     height: 100px;
-}
-.loginBlock{
-    margin: auto;
 }
 .loginBlock a{
     color: orange;
@@ -30,4 +28,22 @@
     line-height: 60px;
     text-decoration: none;
     text-shadow: 2px 0px 17px rgba(206,89,55,0.92);
+    margin: auto;
+
+}
+.loginBlock .logout{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd, 2px 2px 2px rgba(33,206,186,0);
+    color: gold;
+    background: none;
+    border: none;
+    font-family: cursive;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+.loginBlock .logout:hover{
+   color: white;
 }
