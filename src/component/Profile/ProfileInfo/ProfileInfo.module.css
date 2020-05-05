@@ -38,3 +38,6 @@
     margin: 0 30px;
 }
 
+.profileStatus{
+    cursor: pointer;
+}
