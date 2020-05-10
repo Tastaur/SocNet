@@ -5,10 +5,10 @@ import AddNewPostFormRedux from './AddNewPostFormRedux'
 import {reset} from 'redux-form'
 
 
-const MyPosts = (props) => {
+function MyPosts(props) {
   let postsElement = props.posts
       .map(post => <Post likeCount={post.likeCount} message={post.message} creater={post.creater} key={post.id} id={post.id}/>)
-
+  
   let addPost = (value, dispatch) => {
     props.addPost(value.newPostText)
     dispatch(reset('newPostBody'))

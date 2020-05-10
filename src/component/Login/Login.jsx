@@ -12,10 +12,11 @@ const maxLength20 = maxLengthCreator(20)
 const minLength2 = minLengthCreator(2)
 
 
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
   return (
-      <form onSubmit={props.handleSubmit} className={classes.loginForm}>
-        <div><Field className={classes.loginInput} component={Input} validate={email} name={'email'} placeholder={`E-mail`}/></div>
+      <form onSubmit={handleSubmit} className={classes.loginForm}>
+        <div><Field className={classes.loginInput} component={Input} validate={email} name={'email'} placeholder={`E-mail`}/>
+        </div>
         <div><Field component={Input}
                     validate={[required, maxLength20, minLength2]}
                     type={`password`}
@@ -25,8 +26,8 @@ const LoginForm = (props) => {
         /></div>
         <div className={classes.lastRow}><Field component={Input} name={'rememberMe'} type={'checkbox'}/> <span>Remember me</span>
         </div>
-        {props.error && <div className={classes.formSumError}>
-          {props.error}
+        {error && <div className={classes.formSumError}>
+          {error}
         </div>}
         <div>
           <button className={classes.button}>Login</button>
@@ -39,11 +40,11 @@ const LoginReduxForm = reduxForm({
 })(LoginForm)
 
 
-const Login = (props) => {
+const Login = ({login, isAuth}) => {
   const onSubmit = (formData) => {
-    props.login(formData.email, formData.password, formData.rememberMe)
+    login(formData.email, formData.password, formData.rememberMe)
   }
-  if (props.isAuth) {
+  if (isAuth) {
     return <Redirect to={'/profile'}/>
   }
   return <div className={classes.loginContainer}>

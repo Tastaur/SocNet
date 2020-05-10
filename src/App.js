@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import NavBar from './component/NavBar/NavBar'
-import {Route, withRouter} from 'react-router-dom'
+import {BrowserRouter, Route, withRouter} from 'react-router-dom'
 import Setting from './component/Setting/Setting'
 import DialogsContainer from './component/Dialogs/DialogsContainer'
 import MusicContainer from './component/Music/MusicContainer'
@@ -10,11 +10,12 @@ import UsersContainer from './component/Users/UsersContainer'
 import ProfileContainer from './component/Profile/ProfileContainer'
 import HeaderContainer from './component/Header/HeaderContainer'
 import Login from './component/Login/Login'
-import {connect} from 'react-redux'
+import {connect, Provider} from 'react-redux'
 import {compose} from 'redux'
 import {initializeApp} from './redux/appReducer'
 import Preloader from './component/common/preloader/Preloader'
 import LoginPage from './component/LoginPage/LoginPage'
+import store from './redux/reduxStore'
 
 class App extends React.Component {
   componentDidMount() {
@@ -68,6 +69,16 @@ const mapStateToProps= (state) =>{
   }
 }
 
-export default compose (
+let AppContainer = compose (
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App)
+
+const SocNetApp = (props)=>{
+  return(
+  <BrowserRouter>
+    <Provider store={store}>
+      <AppContainer />
+    </Provider>
+  </BrowserRouter>)
+}
+export default SocNetApp

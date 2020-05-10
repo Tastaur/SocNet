@@ -1,0 +1,11 @@
+.selectedPage{
+    font-weight: bolder;
+}
+.pageContainer{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: cursive;
+}
+.pageContainer span{
+    cursor: pointer;
+}
