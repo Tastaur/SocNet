@@ -16,6 +16,14 @@ describe("ProfileStatus component", () => {
     expect(span).not.toBeNull();
   });
 
+  test("after double click span should be open input with corrected status", () => {
+    const component = create(<ProfileStatus status="Kurli" />);
+    const root = component.root;
+    const span = root.findByType("span");
+    span.props.onDoubleClick()
+    const input = root.findByType("input");
+    expect(input.props.value).toBe("Kurli");
+  });
 
   test("after creation input shouldn't be displayed", () => {
     const component = create(<ProfileStatus status="Kurli" />);

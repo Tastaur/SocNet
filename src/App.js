@@ -1,12 +1,7 @@
-import React from 'react'
+import React, {Component, Suspense} from 'react'
 import './App.css'
 import NavBar from './component/NavBar/NavBar'
 import {BrowserRouter, Route, withRouter} from 'react-router-dom'
-import Setting from './component/Setting/Setting'
-import DialogsContainer from './component/Dialogs/DialogsContainer'
-import MusicContainer from './component/Music/MusicContainer'
-import NewsContainer from './component/News/NewsContainer'
-import UsersContainer from './component/Users/UsersContainer'
 import ProfileContainer from './component/Profile/ProfileContainer'
 import HeaderContainer from './component/Header/HeaderContainer'
 import Login from './component/Login/Login'
@@ -17,17 +12,24 @@ import Preloader from './component/common/preloader/Preloader'
 import LoginPage from './component/LoginPage/LoginPage'
 import store from './redux/reduxStore'
 
-class App extends React.Component {
+const DialogsContainer = React.lazy(() => import('./component/Dialogs/DialogsContainer'))
+const MusicContainer = React.lazy(() => import('./component/Music/MusicContainer'))
+const NewsContainer = React.lazy(() => import('./component/News/NewsContainer'))
+const Setting = React.lazy(() => import('./component/Setting/Setting'))
+const UsersContainer = React.lazy(() => import('./component/Users/UsersContainer'))
+
+class App extends Component {
   componentDidMount() {
     this.props.initializeApp()
 
   }
+
   render() {
 
-    if(!this.props.initialized){
+    if (!this.props.initialized) {
       return <Preloader/>
     }
-    if(!this.props.isAuth){
+    if (!this.props.isAuth) {
       return <LoginPage/>
     }
     return (
@@ -35,25 +37,25 @@ class App extends React.Component {
           <HeaderContainer/>
           <NavBar/>
           <div className="appWrapperContent">
-            <Route path='/dialogs'
-                   render={() => <DialogsContainer/>}
-            />
             <Route path='/profile/:userId?'
                    render={() => <ProfileContainer
                    />}
             />
-            <Route path='/music'
-                   render={() => <MusicContainer
-                   />}
-            />
-            <Route path='/settings'
-                   render={() => <Setting/>}
-            />
-            <Route path='/news'
-                   render={() => <NewsContainer
-                   />}
-            />
-            <Route path='/users' render={() => <UsersContainer/>}/>
+            <Suspense fallback={<Preloader/>}>
+              <Route path='/dialogs'
+                     render={() => <DialogsContainer/>}
+              />
+              <Route path='/music'
+                     render={() => <MusicContainer/>}
+              />
+              <Route path='/settings'
+                     render={() => <Setting/>}
+              />
+              <Route path='/news'
+                     render={() => <NewsContainer/>}
+              />
+              <Route path='/users' render={() => <UsersContainer/>}/>
+            </Suspense>
             <Route path='/login' render={() => <Login/>}/>
 
           </div>
@@ -62,23 +64,23 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps= (state) =>{
+const mapStateToProps = (state) => {
   return {
     initialized: state.app.initialized,
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
   }
 }
 
-let AppContainer = compose (
+let AppContainer = compose(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App)
 
-const SocNetApp = (props)=>{
-  return(
-  <BrowserRouter>
-    <Provider store={store}>
-      <AppContainer />
-    </Provider>
-  </BrowserRouter>)
+const SocNetApp = (props) => {
+  return (
+      <BrowserRouter>
+        <Provider store={store}>
+          <AppContainer/>
+        </Provider>
+      </BrowserRouter>)
 }
 export default SocNetApp

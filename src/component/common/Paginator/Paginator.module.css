@@ -3,8 +3,16 @@
 }
 .pageContainer{
     display: flex;
-    justify-content: space-evenly;
     font-family: cursive;
+    width: 390px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.pageContainer button{
+    background: none;
+    border: none;
+    font-size: 20px;
+    outline: none;
 }
 .pageContainer span{
     cursor: pointer;
