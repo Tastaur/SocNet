@@ -1,1 +1,0 @@
-{"version":3,"sources":["NewsItem.module.css"],"names":[],"mappings":"AAAA,2BACI,YAAa,CACb,YACJ,CACA,wBACI,YAAa,CACb,WACJ","file":"7.28fb91c9.chunk.css","sourcesContent":[".mainImage{\n    height: 400px;\n    width: 1000px;\n}\n.avatar{\n    height: 100px;\n    width: 100px;\n}\n"]}

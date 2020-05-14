@@ -1,1 +1,0 @@
-{"version":3,"sources":["Setting.module.css"],"names":[],"mappings":"AAAA,0BACI,YAAa,CACb,YACJ,CACA,uBACI,YAAa,CACb,WACJ","file":"8.5c520987.chunk.css","sourcesContent":[".mainImage{\n    height: 400px;\n    width: 1000px;\n}\n.avatar{\n    height: 100px;\n    width: 100px;\n}\n"]}
