@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6ed299277e89f94f38d2749f27be685",
+    "revision": "c481621f8a42967881dde5620cdf4970",
     "url": "/SocNet/index.html"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/css/8.1d3e5cba.chunk.css"
   },
   {
-    "revision": "21ffb533874089c96136",
+    "revision": "15843c11a75d113b0785",
     "url": "/SocNet/static/css/main.3e93b437.chunk.css"
   },
   {
@@ -68,8 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/js/8.0964cc45.chunk.js"
   },
   {
-    "revision": "21ffb533874089c96136",
-    "url": "/SocNet/static/js/main.d69487ee.chunk.js"
+    "revision": "15843c11a75d113b0785",
+    "url": "/SocNet/static/js/main.1b769dd6.chunk.js"
   },
   {
     "revision": "1204324e0715c7572c00",
