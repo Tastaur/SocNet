@@ -1,7 +1,7 @@
 import React, {Component, Suspense} from 'react'
 import './App.css'
 import NavBar from './component/NavBar/NavBar'
-import {BrowserRouter, HashRouter, Route, withRouter} from 'react-router-dom'
+import {HashRouter, Route, withRouter} from 'react-router-dom'
 import HeaderContainer from './component/Header/HeaderContainer'
 import Login from './component/Login/Login'
 import {connect, Provider} from 'react-redux'
@@ -77,7 +77,7 @@ let AppContainer = compose(
 
 const SocNetApp = (props) => {
   return (
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Provider store={store}>
           <AppContainer/>
         </Provider>
