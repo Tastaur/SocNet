@@ -17,3 +17,6 @@
 .pageContainer span{
     cursor: pointer;
 }
+.pageContainer button{
+    cursor: pointer;
+}
