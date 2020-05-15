@@ -16,22 +16,24 @@ const ProfileInfo = (props) => {
     return <Preloader/>
   }
 
+  const onPhotoSelected = (e) =>{
+    if(e.target.files.length){
+      props.savePhoto(e.target.files[0])
+    }
+  }
   return <div className={classes.profileInfo}>
     <div>
-      {props.profile.photos.large != null || props.profile.photos.large != undefined ?
-          <div><img className={classes.avatar} src={props.profile.photos.large}/></div> :
-          <div><img className={classes.avatar} src={defaultAvatar}/></div>}
+      <div><img className={classes.avatar} src={props.profile.photos.large || defaultAvatar}/></div>
+      {props.isOwner && <div><input type={'file'} onChange={onPhotoSelected}/></div>}
       <div>{props.profile.fullName}</div>
-      <div>
-        <div className={classes.descriptionBlock}> {props.profile.aboutMe}</div>
-        {props.profile.lookingForAJob ?
-            <div className={classes.jobStatus}>Need job <img src={find} className={classes.jobPic}/></div>
-            : <div className={classes.jobStatus}>Don't need a job <img src={notNeed} className={classes.jobPic}/></div>
-        }
-        <div className={classes.jobStatus}>{props.profile.lookingForAJobDescription}</div>
-        <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
-      </div>
+      <div className={classes.descriptionBlock}> {props.profile.aboutMe}</div>
+      {props.profile.lookingForAJob ? <img src={find} className={classes.jobPic} alt={'i need job'} /> : null}
+      <div className={classes.jobStatus}>{props.profile.lookingForAJobDescription}</div>
+      <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
     </div>
+
+
+    {/*some shitCode*/}
     <div className={classes.contactContainer}>
 
       {props.profile.contacts.facebook != null || props.profile.contacts.facebook != undefined ?
@@ -58,8 +60,9 @@ const ProfileInfo = (props) => {
             <span>{props.profile.contacts.github}</span></div> : null}
 
     </div>
-
   </div>
+
+
 }
 
 export default ProfileInfo

@@ -1,12 +1,17 @@
 import React from 'react'
-import classes from './Music.module.css'
-import MusicItem from'./MusiItem/MusicItem'
+import MusicItem from './MusiItem/MusicItem'
 
 const Music = (props) => {
   let profileMusic = props.state
         .map(music => <MusicItem artist={music.artist} key={music.id} song={music.song}/>)
   return <div>
     {profileMusic}
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <span>!!!! this page in progress !!!</span>
   </div>
 }
 

@@ -6,6 +6,12 @@ const News = (props) => {
       .map(news=> <NewsItem text={news.text} key={news.id} id={news.id}/>)
   return <div>
   {hotNews}
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ <span>!!!! this page in progress !!!</span>
   </div>
 }
 
