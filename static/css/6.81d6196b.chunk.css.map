@@ -1,0 +1,1 @@
+{"version":3,"sources":["MusicItem.module.css"],"names":[],"mappings":"AAAA,4BACI,YAAa,CACb,YACJ,CACA,yBACI,YAAa,CACb,WACJ","file":"6.81d6196b.chunk.css","sourcesContent":[".mainImage{\r\n    height: 400px;\r\n    width: 1000px;\r\n}\r\n.avatar{\r\n    height: 100px;\r\n    width: 100px;\r\n}\r\n"]}
