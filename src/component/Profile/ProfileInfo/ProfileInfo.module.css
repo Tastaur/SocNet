@@ -76,3 +76,10 @@
     height: 30px;
     z-index: 20;
 }
+
+.status {
+    font-family: Arial;
+    font-weight: bolder;
+    text-decoration: underline;
+    padding: 15px;
+}
