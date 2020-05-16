@@ -4,14 +4,14 @@ import {maxLengthCreator, minLengthCreator, required} from '../../../utils/valid
 import classes from './MyPosts.module.css'
 import  {Textarea} from '../../common/Forms/FormsControl'
 
-const maxLength30 = maxLengthCreator(30)
+const maxLength120 = maxLengthCreator(120)
 const minLength2 = minLengthCreator(2)
 let AddNewPostForm = (props) => {
   return <form onSubmit={props.handleSubmit} className={classes.form} >
     <Field component={Textarea}
            name={'newPostText'}
            placeholder='Enter your post'
-           validate={[required, maxLength30, minLength2]}
+           validate={[required, maxLength120, minLength2]}
     />
     <button className={classes.button}>Add posts</button>
   </form>

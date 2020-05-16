@@ -2,7 +2,6 @@ import React from 'react'
 import classes from './ProfileInfo.module.css'
 import Preloader from '../../common/preloader/Preloader'
 import find from '../../../assets/images/findJob.svg'
-import notNeed from '../../../assets/images/notNeedJob.svg'
 import facebookIcon from '../../../assets/images/facebook.svg'
 import instagramIcon from '../../../assets/images/instagram.svg'
 import vkIcon from '../../../assets/images/vk.svg'
@@ -24,7 +23,14 @@ const ProfileInfo = (props) => {
   return <div className={classes.profileInfo}>
     <div>
       <div><img className={classes.avatar} src={props.profile.photos.large || defaultAvatar}/></div>
-      {props.isOwner && <div><input type={'file'} onChange={onPhotoSelected}/></div>}
+
+
+      {props.isOwner && <div className={classes.fileForm}>
+        <div className={classes.selectButton}>Change avatar</div>
+        <input type={'file'} className={classes.upload} onChange={onPhotoSelected}/>
+      </div>}
+
+
       <div>{props.profile.fullName}</div>
       <div className={classes.descriptionBlock}> {props.profile.aboutMe}</div>
       {props.profile.lookingForAJob ? <img src={find} className={classes.jobPic} alt={'i need job'} /> : null}
