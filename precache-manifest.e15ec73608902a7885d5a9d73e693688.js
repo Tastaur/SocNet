@@ -1,30 +1,30 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "70ff23e28b8ecf7fe5342affec045ab0",
+    "revision": "17484a3732bbe5dbfe78edfc502b352a",
     "url": "/SocNet/index.html"
   },
   {
-    "revision": "6bef01a0b0162fe74383",
-    "url": "/SocNet/static/css/3.19e62d89.chunk.css"
+    "revision": "6f7bdf5d873ec1c47b91",
+    "url": "/SocNet/static/css/3.c07ba40b.chunk.css"
   },
   {
-    "revision": "2f73cf13f50f0cfd35ec",
+    "revision": "d75bf236980bf32d2c74",
     "url": "/SocNet/static/css/4.ce8fd1e3.chunk.css"
   },
   {
-    "revision": "881ac45c8c92572e6ea5",
+    "revision": "092ad1b270c437af08ef",
     "url": "/SocNet/static/css/5.4e2c3b84.chunk.css"
   },
   {
-    "revision": "c9cf1462e4962077fc1d",
+    "revision": "90e6c267fec02ed52af8",
     "url": "/SocNet/static/css/6.81d6196b.chunk.css"
   },
   {
-    "revision": "4ebfa183ab9cfa8f85c9",
+    "revision": "55013fd2f89d2f846804",
     "url": "/SocNet/static/css/7.6b8b1f0c.chunk.css"
   },
   {
-    "revision": "d54454592ffab308c65c",
+    "revision": "b21c8a6e9492d6f9375e",
     "url": "/SocNet/static/css/main.3e93b437.chunk.css"
   },
   {
@@ -36,40 +36,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/js/2.e5afe63c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6bef01a0b0162fe74383",
-    "url": "/SocNet/static/js/3.a5e3733c.chunk.js"
+    "revision": "6f7bdf5d873ec1c47b91",
+    "url": "/SocNet/static/js/3.b0aea05b.chunk.js"
   },
   {
-    "revision": "2f73cf13f50f0cfd35ec",
-    "url": "/SocNet/static/js/4.2dd9b3db.chunk.js"
+    "revision": "d75bf236980bf32d2c74",
+    "url": "/SocNet/static/js/4.de3602ad.chunk.js"
   },
   {
     "revision": "81896c98bac7b5b16ab1d3790da5b937",
-    "url": "/SocNet/static/js/4.2dd9b3db.chunk.js.LICENSE.txt"
+    "url": "/SocNet/static/js/4.de3602ad.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "881ac45c8c92572e6ea5",
-    "url": "/SocNet/static/js/5.0482a365.chunk.js"
+    "revision": "092ad1b270c437af08ef",
+    "url": "/SocNet/static/js/5.c37b8a48.chunk.js"
   },
   {
-    "revision": "c9cf1462e4962077fc1d",
-    "url": "/SocNet/static/js/6.8ba3cdc5.chunk.js"
+    "revision": "90e6c267fec02ed52af8",
+    "url": "/SocNet/static/js/6.e3fae216.chunk.js"
   },
   {
-    "revision": "4ebfa183ab9cfa8f85c9",
-    "url": "/SocNet/static/js/7.7dee4063.chunk.js"
+    "revision": "55013fd2f89d2f846804",
+    "url": "/SocNet/static/js/7.3fff4f3c.chunk.js"
   },
   {
-    "revision": "064a8816bae95e5c654d",
-    "url": "/SocNet/static/js/8.ded801af.chunk.js"
+    "revision": "6d2adb3e07cb5de404e1",
+    "url": "/SocNet/static/js/8.2eed9350.chunk.js"
   },
   {
-    "revision": "d54454592ffab308c65c",
-    "url": "/SocNet/static/js/main.b4367923.chunk.js"
+    "revision": "b21c8a6e9492d6f9375e",
+    "url": "/SocNet/static/js/main.e16fbeee.chunk.js"
   },
   {
-    "revision": "ddfaafc408afd67a5b6e",
-    "url": "/SocNet/static/js/runtime-main.88f191e3.js"
+    "revision": "fd832fe6de70e8d2f258",
+    "url": "/SocNet/static/js/runtime-main.828f89c4.js"
   },
   {
     "revision": "7e632128b95cba685ffc6f51b7167253",
@@ -90,6 +90,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ebccca51a5f89ddac816e7aa1498689b",
     "url": "/SocNet/static/media/instagram.ebccca51.svg"
+  },
+  {
+    "revision": "012a1b57be42397a5b9b3f29c5bfdb0b",
+    "url": "/SocNet/static/media/notNeedJob.012a1b57.svg"
   },
   {
     "revision": "9cbe8a2d8cb786270fca5ce219533a5a",
