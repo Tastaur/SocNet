@@ -10,7 +10,6 @@ import {initializeApp} from './redux/appReducer'
 import Preloader from './component/common/preloader/Preloader'
 import LoginPage from './component/LoginPage/LoginPage'
 import store from './redux/reduxStore'
-import {withSuspense} from './HOC/withSuspense'
 
 const DialogsContainer = React.lazy(() => import('./component/Dialogs/DialogsContainer'))
 const MusicContainer = React.lazy(() => import('./component/Music/MusicContainer'))
@@ -38,10 +37,11 @@ class App extends Component {
           <HeaderContainer/>
           <NavBar/>
           <div className="appWrapperContent">
-            <Route path='/profile/:userId?'
-                   render={withSuspense(ProfileContainer)}
-            />
+
             <Suspense fallback={<Preloader/>}>
+              <Route path='/profile/:userId?'
+                     render={() => <ProfileContainer/>}
+              />
               <Route path='/dialogs'
                      render={() => <DialogsContainer/>}
               />

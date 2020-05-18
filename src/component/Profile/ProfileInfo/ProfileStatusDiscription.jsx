@@ -10,8 +10,8 @@ const ProfileStatusDiscription = (props) => {
 
     <div className={classes.jobStatus}><span>Need job:</span> <img src={props.profile.lookingForAJob ? find : unfinde}
                                                                    className={classes.jobPic}
-                                                                   alt={'i need job'}
-    /> {props.profile.lookingForAJobDescription}</div>
+    /></div>
+    <div>{props.profile.lookingForAJobDescription}</div>
 
   </div>
 }

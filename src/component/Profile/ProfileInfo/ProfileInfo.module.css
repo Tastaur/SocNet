@@ -32,7 +32,14 @@
     height: 60px;
     align-items: center;
 }
+.contactItem a {
+    text-decoration: none;
+    color: black;
+}
+.contactItem a:hover {
 
+    color: cornflowerblue;
+}
 .jobStatus {
     height: 60px;
     display: flex;
@@ -93,3 +100,5 @@
     opacity: 1;
     transition-duration: .4s;
 }
+
+
