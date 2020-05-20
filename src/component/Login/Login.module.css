@@ -17,7 +17,7 @@
 .loginContainer{
     background: rgba(255, 255, 255, 0.51);
     width: 360px;
-    height: 360px;
+    height: 450px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;

@@ -9,7 +9,7 @@ const instance = axios.create({
 })
 
 export const userAPI = {
-  getUser(currentPage, pageSize= 80) {
+  getUser(currentPage, pageSize = 80) {
     return instance.get(`users?page=${currentPage}&count=${pageSize}`).then(response => {
       return response.data
     })
@@ -32,25 +32,26 @@ export const profileAPI = {
       return response.data
     })
   },
-  getStatus(userId){
-    return instance.get(`profile/status/${userId}`).then(response =>{
+  getStatus(userId) {
+    return instance.get(`profile/status/${userId}`).then(response => {
       return response.data
     })
   },
-  updateStatus(newStatus){
-    return instance.put(`profile/status`, {status:newStatus})
+  updateStatus(newStatus) {
+    return instance.put(`profile/status`, {status: newStatus})
   },
-  savePhoto(newPhoto){
+  savePhoto(newPhoto) {
     let formData = new FormData()
     formData.append('image', newPhoto)
     return instance.put(`profile/photo`, formData, {
-      headers:{
-      'Content-Type': 'multipart/form-data'
-      }})
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
   },
-  saveProfile(profile){
+  saveProfile(profile) {
     return instance.put(`profile`, profile)
-  }
+  },
 }
 
 export const authApi = {
@@ -59,12 +60,16 @@ export const authApi = {
       return response.data
     })
   },
-  login(email, password, rememberMe = false){
-    return instance.post(`auth/login`, {email, password, rememberMe})
+  login(email, password, rememberMe = false, captcha) {
+    return instance.post(`auth/login`, {email, password, rememberMe,captcha})
   },
-  logout(){
+  logout() {
     return instance.delete(`auth/login`)
-  }
+  },
 }
 
-
+export const securityApi = {
+  getCaptcha(){
+    return instance.get(`security/get-captcha-url`)
+  }
+}

@@ -1,7 +1,7 @@
 import React, {Component, Suspense} from 'react'
 import './App.css'
 import NavBar from './component/NavBar/NavBar'
-import {HashRouter, Route, withRouter} from 'react-router-dom'
+import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom'
 import HeaderContainer from './component/Header/HeaderContainer'
 import Login from './component/Login/Login'
 import {connect, Provider} from 'react-redux'
@@ -39,6 +39,10 @@ class App extends Component {
           <div className="appWrapperContent">
 
             <Suspense fallback={<Preloader/>}>
+              <Switch>
+                <Route exact path='/' render={()=>
+                       <Redirect to={'/profile'}/>}
+                />
               <Route path='/profile/:userId?'
                      render={() => <ProfileContainer/>}
               />
@@ -55,6 +59,8 @@ class App extends Component {
                      render={() => <NewsContainer/>}
               />
               <Route path='/users' render={() => <UsersContainer/>}/>
+                <Route path='*' render={() => <>Page not found</>}/>
+              </Switch>
             </Suspense>
             <Route path='/login' render={() => <Login/>}/>
 
@@ -77,10 +83,10 @@ let AppContainer = compose(
 
 const SocNetApp = (props) => {
   return (
-      <HashRouter>
+      <BrowserRouter>
         <Provider store={store}>
           <AppContainer/>
         </Provider>
-      </HashRouter>)
+      </BrowserRouter>)
 }
 export default SocNetApp

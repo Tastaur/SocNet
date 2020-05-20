@@ -8,11 +8,16 @@ import ProfileStatusAvatar from './ProfileStatusAvatar'
 import ProfileFormRedux from './ProfileForm'
 
 const ProfileInfo = (props) => {
-  let saveProfile = (formData) => {
-    props.saveProfile(formData)
-    setEditMode(!editMode)
-  }
   const [editMode, setEditMode] = useState(false)
+
+
+  let saveProfile = (formData) => {
+    props.saveProfile(formData).then(() => {
+      setEditMode(!editMode)
+    })
+
+  }
+
   if (!props.profile) {
     return <Preloader/>
   }
@@ -21,25 +26,31 @@ const ProfileInfo = (props) => {
       props.savePhoto(e.target.files[0])
     }
   }
-  return <div className={classes.profileInfo}>
-    <div>
-      <ProfileStatusAvatar {...props} onPhotoSelected={onPhotoSelected}/>
-      <ProfileStatusWithHooks status={props.status} isOwner={props.isOwner} updateStatus={props.updateStatus}/>
+  return <div>
+    {props.profileUpdate ? <Preloader/> : null}
 
-      <ProfileStatusDiscription {...props} />
+    {editMode ? <ProfileFormRedux initialValues={{...props.profile}}
+                                  profile={{...props.profile}}
+                                  onSubmit={saveProfile}
+        /> :
 
-      {editMode && <ProfileFormRedux initialValues={{...props.profile}} profile={{...props.profile}} onSubmit={saveProfile} />}
+        <div className={classes.profileInfo}>
+          <div>
+            <ProfileStatusAvatar {...props} onPhotoSelected={onPhotoSelected}/>
+            <ProfileStatusWithHooks status={props.status} isOwner={props.isOwner} updateStatus={props.updateStatus}/>
+            <ProfileStatusDiscription {...props} />
+            {props.isOwner ?
+                <button onClick={() => {
+                  setEditMode(!editMode)
+                }}
+                > Edit profile </button> : null
+            }</div>
+          <div className={classes.contactContainer}>
+            <ProfileStatusContact  {...props}/>
+          </div>
+        </div>}
 
-      {props.isOwner && !editMode ?
-      <button onClick={() => {
-        setEditMode(!editMode)
-      }}
-      > Edit profile </button> : null
-      }
-    </div>
-    <div className={classes.contactContainer}>
-      <ProfileStatusContact  {...props}/>
-    </div>
+
   </div>
 
 

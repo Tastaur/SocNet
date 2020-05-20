@@ -12,7 +12,7 @@ const maxLength20 = maxLengthCreator(20)
 const minLength2 = minLengthCreator(2)
 
 
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({handleSubmit, error,captchaUrl}) => {
   return (
       <form onSubmit={handleSubmit} className={classes.loginForm}>
         <div><Field className={classes.loginInput} component={Input} validate={email} name={'email'} placeholder={`E-mail`}/>
@@ -30,6 +30,15 @@ const LoginForm = ({handleSubmit, error}) => {
           {error}
         </div>}
         <div>
+          {captchaUrl && <div>
+            <img alt={'captcha'} src={captchaUrl}/>
+            <Field component={Input}
+                   validate={[required]}
+                   name={'captcha'}
+                   placeholder={`Set security password`}
+                   className={classes.loginInput}
+            />
+          </div>}
           <button className={classes.button}>Login</button>
         </div>
       </form>
@@ -40,20 +49,21 @@ const LoginReduxForm = reduxForm({
 })(LoginForm)
 
 
-const Login = ({login, isAuth}) => {
+const Login = ({login, isAuth, captchaUrl}) => {
   const onSubmit = (formData) => {
-    login(formData.email, formData.password, formData.rememberMe)
+    login(formData.email, formData.password, formData.rememberMe, formData.captcha)
   }
   if (isAuth) {
     return <Redirect to={'/profile'}/>
   }
   return <div className={classes.loginContainer}>
     <h1 className={classes.loginTitle}>Wellcome to social network</h1>
-    <LoginReduxForm onSubmit={onSubmit}/>
+    <LoginReduxForm captchaUrl={captchaUrl} onSubmit={onSubmit}/>
   </div>
 }
 const mapStateToProps = (state) => ({
   isAuth: state.auth.isAuth,
+  captchaUrl: state.auth.captchaUrl,
 })
 
 export default connect(mapStateToProps, {login})(Login)
