@@ -1,7 +1,7 @@
 import React, {Component, Suspense} from 'react'
 import './App.css'
 import NavBar from './component/NavBar/NavBar'
-import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom'
+import {HashRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom'
 import HeaderContainer from './component/Header/HeaderContainer'
 import Login from './component/Login/Login'
 import {connect, Provider} from 'react-redux'
@@ -83,10 +83,10 @@ let AppContainer = compose(
 
 const SocNetApp = (props) => {
   return (
-      <BrowserRouter>
+      <HashRouter>
         <Provider store={store}>
           <AppContainer/>
         </Provider>
-      </BrowserRouter>)
+      </HashRouter>)
 }
 export default SocNetApp
