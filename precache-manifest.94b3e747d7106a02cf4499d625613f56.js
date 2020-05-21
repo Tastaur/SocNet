@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "95c2f573f82fa8cbeda5b4f744a1e836",
+    "revision": "2eb7e4b067854d29a5cf246c39843b91",
     "url": "/SocNet/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/css/3.d2351a7d.chunk.css"
   },
   {
-    "revision": "7d19edd1b96984a3ce92",
+    "revision": "578aac8f33048780053a",
     "url": "/SocNet/static/css/4.ce8fd1e3.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/css/7.6b8b1f0c.chunk.css"
   },
   {
-    "revision": "87a7a181f11b4b18f2ff",
+    "revision": "76b80deafb1aa5307ef7",
     "url": "/SocNet/static/css/main.170c76a1.chunk.css"
   },
   {
@@ -40,12 +40,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/js/3.83a921e8.chunk.js"
   },
   {
-    "revision": "7d19edd1b96984a3ce92",
-    "url": "/SocNet/static/js/4.ce8678f5.chunk.js"
+    "revision": "578aac8f33048780053a",
+    "url": "/SocNet/static/js/4.f79e6068.chunk.js"
   },
   {
     "revision": "81896c98bac7b5b16ab1d3790da5b937",
-    "url": "/SocNet/static/js/4.ce8678f5.chunk.js.LICENSE.txt"
+    "url": "/SocNet/static/js/4.f79e6068.chunk.js.LICENSE.txt"
   },
   {
     "revision": "1e9a4be0133e22403c44",
@@ -64,12 +64,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/js/8.6aaf8cdf.chunk.js"
   },
   {
-    "revision": "87a7a181f11b4b18f2ff",
-    "url": "/SocNet/static/js/main.bf594e44.chunk.js"
+    "revision": "76b80deafb1aa5307ef7",
+    "url": "/SocNet/static/js/main.35d290d0.chunk.js"
   },
   {
-    "revision": "68061ecbef28c76931bc",
-    "url": "/SocNet/static/js/runtime-main.8d5b3a6e.js"
+    "revision": "889a9cff78200fcc374b",
+    "url": "/SocNet/static/js/runtime-main.79d459d7.js"
   },
   {
     "revision": "7e632128b95cba685ffc6f51b7167253",
