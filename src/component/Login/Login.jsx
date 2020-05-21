@@ -57,7 +57,7 @@ const Login = ({login, isAuth, captchaUrl}) => {
     return <Redirect to={'/profile'}/>
   }
   return <div className={classes.loginContainer}>
-    <h1 className={classes.loginTitle}>Wellcome to social network</h1>
+    <h1 className={classes.loginTitle}>Welcome to social network</h1>
     <LoginReduxForm captchaUrl={captchaUrl} onSubmit={onSubmit}/>
   </div>
 }
