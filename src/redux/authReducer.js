@@ -20,7 +20,7 @@ const authReducer = (state = initialState, action) => {
         ...state,
         ...action.payload,
       }
-      case GET_CAPTCHA_URL:
+    case GET_CAPTCHA_URL:
       return {
         ...state,
         captchaUrl: action.captchaUrl,
@@ -41,13 +41,13 @@ export const getAuthUserData = () => async (dispatch) => {
 
 }
 export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
-  let response = await authApi.login(email, password, rememberMe,captcha)
+  let response = await authApi.login(email, password, rememberMe, captcha)
   if (response.data.resultCode === 0) {
     //success
     dispatch(getAuthUserData())
-  }   else {
+  } else {
     //error
-    if(response.data.resultCode === 10) {
+    if (response.data.resultCode === 10) {
       dispatch(setCaptcha())
     }
     let message = response.data.messages.length > 0 ? response.data.messages[0] : 'Email or Password is wrong'
@@ -61,9 +61,9 @@ export const logout = () => async (dispatch) => {
   }
 }
 
-export const setCaptcha = () => async (dispatch) =>{
+export const setCaptcha = () => async (dispatch) => {
   let response = await securityApi.getCaptcha()
-  const captchaUrl = response.data.url;
+  const captchaUrl = response.data.url
   dispatch(getCaptchaUrl(captchaUrl))
 }
 
