@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2eb7e4b067854d29a5cf246c39843b91",
+    "revision": "d9095ab6aa9087e03cc0ecfda6947385",
     "url": "/SocNet/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/css/3.d2351a7d.chunk.css"
   },
   {
-    "revision": "578aac8f33048780053a",
+    "revision": "6ae8ea13b9bd2edc092f",
     "url": "/SocNet/static/css/4.ce8fd1e3.chunk.css"
   },
   {
@@ -40,12 +40,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/js/3.83a921e8.chunk.js"
   },
   {
-    "revision": "578aac8f33048780053a",
-    "url": "/SocNet/static/js/4.f79e6068.chunk.js"
+    "revision": "6ae8ea13b9bd2edc092f",
+    "url": "/SocNet/static/js/4.c198f35b.chunk.js"
   },
   {
     "revision": "81896c98bac7b5b16ab1d3790da5b937",
-    "url": "/SocNet/static/js/4.f79e6068.chunk.js.LICENSE.txt"
+    "url": "/SocNet/static/js/4.c198f35b.chunk.js.LICENSE.txt"
   },
   {
     "revision": "1e9a4be0133e22403c44",
@@ -68,8 +68,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/SocNet/static/js/main.35d290d0.chunk.js"
   },
   {
-    "revision": "889a9cff78200fcc374b",
-    "url": "/SocNet/static/js/runtime-main.79d459d7.js"
+    "revision": "02934f1ec358a5b95d1c",
+    "url": "/SocNet/static/js/runtime-main.bf95c823.js"
   },
   {
     "revision": "7e632128b95cba685ffc6f51b7167253",
