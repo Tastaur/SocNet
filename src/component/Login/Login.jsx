@@ -39,7 +39,7 @@ const LoginForm = ({handleSubmit, error,captchaUrl}) => {
                    className={classes.loginInput}
             />
           </div>}
-          <button className={classes.button}>Login</button>
+          <button onTouchCancel={handleSubmit} className={classes.button}>Login</button>
         </div>
       </form>
   )
